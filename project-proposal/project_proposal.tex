@@ -105,43 +105,54 @@
 \section*{Introduction}\label{sec:introduction}
 
 \section{Biological question}\label{sec:biological_question}
+The question that leads the project concerns the contribution of Human Specific Genes (HSGs) with respect to non-HSGs in the context of medulloblastoma (MB). \\
+To answer to this question, we will exploit the outcome of these three experiments: identifying the presence of causal relations among MB HSGs and interpreting their significance, assessing the functional significance of the MB subset of HSGs and exploring the topology of the network built on the subset of HSGs. \\
+Together, these objectives will build up the knowledge necessary to unravel the role of HSGs in MB and at which level these genes can act as markers for MB subtyping. 
+
 
 \section{Data}\label{sec:data}
 
 \subsection{Cohort selection}\label{sec:cohort_selection}
-
+Looking at different resources available in the web, we selected the bla bla bla [ref] cohort. \\
+It comprises NUMBER of samples, bla bla bla. \\
+Which kind of data data are?\\
+Talk about the different data available in the dataset. 
 
 \subsection{List of Human Specific Genes}\label{sec:list_genes}
 A list of Human Specific Genes were retrieved from the work of Bitari et al. \cite{bitar2019genes}. \\
 In their work bla bla \\
-This list of genes were used 
+This list of genes retrieved will be used to intersect bla bla bla.
 
 \subsection{FANTOM dataset}\label{sec:Fantom_dataset}
-
+The FANTOM \cite{fantom5} 
 
 \section{Pipeline}\label{sec:pipeline}
 The project workflow is described in \textbf{Figure ref}. Looking at it, it is possible to divide the work in four or five or more (don't know at the moment) main steps.
 
 \begin{enumerate}
-    \item Data pre-processing;
+    \item Data preprocessing;
     \item Data integration between the filtered medulloblastoma Human Specific Genes and the FANTOM data;
     \item Functional Analysis;
     \item Network Analysis.
 \end{enumerate}
 
-\subsection{Data pre-processing}\label{sec:pre_processing}
-\subsubsection{Data normalization}\label{sec:normalization}
+\subsection{Data preprocessing}\label{sec:pre_processing}
+This initial step play a pivotal role in our research project. While GSE datasets are carefully curated, they may still contain varying degress of noise, errors, or inconsistencies. The preprocessing of this dataset is of utmost importance to guarantee the integrity and suitability of the data for our analysis. \\
+By tackling issues such as data standardization, normalization, the removal of batch effects, imputation of missing data, and the detection of outliers, our aim is to bloster the validity and comprehensibility of our results. These measures are essential in preparing the chosen GSE dataset for a thorough analysis and interpretation, ensuring the resiliance and dependability of our findings within the context of our study's specific objectives.
 
 \subsection{Integrate the filtered Medulloblastoma Human Specific Genes with the FANTOM data}
 
+
 \subsection{Functional Analysis}\label{sec:functional_analysis}
 
-\subsection{Network analysis}\label{sec:network_analysis}
+
+\subsection{Network Analysis}\label{sec:network_analysis}
+With the data obtained, we aim to construct a network of interactions. \\
+Once the network is established, we will embark on measuring various metrics, including clustering coefficient, diameter, and centrality measures, to uncover its inherent characteristics. \\
+A key focus of our analysis will be the identification of hub genes, as well as the potential delineation of network communities. These analyses will shed light on the most influential components of the network and the existence of functional modules within it. \\
+To accomplish this, we will employ various existing Python libraries designed for network analysis, such as NetworkX \cite{hagberg2008exploring} or iGraph \cite{csardi2006igraph}. However, it is worth nothing that we approach this task without any a priori knowledge of the network's size. Given the potential computational challenges this may pose, we will evaluate the feasibility of each steps during the analysis. 
 
 
-\subsubsection{Network construction}\label{sec:network_construction}
-In base of the data gained during the previous steps we will decide which kind of network construct. 
-\subsubsection{Network characteristics}\label{sec:network_characteristic}
 \section{Expected results}\label{sec:expected_results}
 
 \section{Project management}\label{sec:management}
