@@ -88,7 +88,10 @@
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
 
-\Abstract{}
+\Abstract{Medulloblastoma, the most prevalent malignant brain tumor in childhood, poses a significant health challenge, impacting children at a rate tenfold higher than adults. This condition is molecularly diverse, with distinct subgroups (MB-WNT, SHH, GP3, and GP4) exhibiting variations in cytogenetics, mutational profiles, and gene expression signatures, shaping treatment strategies and outcomes. While its origins are not attributed to environmental or age-related factors, genomic alterations are considered primary drivers. In this project, we aim to investigate the role of Human Specific Genes (HSGs) in the context of Medulloblastoma.\\
+HSGs are unique to the human species, lacking counterparts in closely related species. These genes often underpin traits distinctive to humans, evolving recently in the human lineage or undergoing significant changes. A considerable portion of HSGs play a critical roles in brain functions, immune systems, and metabolic processes.\\
+Our research seeks to identify HSGs that may contribute to Medulloblastoma's development. We will integrate the set of Medulloblastoma-associated HSGs with FANTOM causal relations and perform functional and network analyses on the resultant gene set. Our finding will lead to hypotheses about the role of HSGs in the context of Medulloblastoma, shedding light on this challenging pediatric brain tumor.\\
+Understanding the involvement of HSGs in Medulloblastoma may offer valuable insights into what sets humans apart from other species and could have implications for targeted therapies or improvement treatment strategies.}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -103,28 +106,42 @@
 %----------------------------------------------------------------------------------------
 
 \section*{Introduction}\label{sec:introduction}
+Medulloblastoma stands as the most prevalent malignant brain tumor in childhood, constituting roughly 20\% of all pediatric brain tumors, and impacting children at a rate tenfold higher than adults [ref]. This condition is categorized into distinct molecular subgroups: MB-WNT, Sonic Hedgehog (SHH), Group 3 (G3) and Group 4 (G4). These subgroups exhibit striking differences in cytogenetics, mutational profiles, and gene expression signatures, all of which significantly influence the treatment strategies and outcomes. \\
+Given its prevalence in childhood, Medulloblastoma's origins cannot be attributed to environmental or age-related factors. Instead, it is primary driven by genomic alterations. \\
+In our project we will investigate the contribution of Human Specific Genes (HSGs) with respect to non-HSGs in the context of this disease. \\
+HSGs are genes that are unique to the human species and have no direct counterparts in the genome of other closely related species, such as our primate relatives. These genes are often considered to be responsible for traits or functions that are distinctive to humans. They may have evolved relatively recently in the human lineage or have undergone significant changes that make them distinct from the genes found in other species. Identification and study of HSGs could provide insight into what sets humans apart from other species. \\ 
+It is worth nothing that a substantial portion of HSGs plays a critical role in brain functions, alongside their roles in the immune system and metabolic processes \cite{bitar2019genes}.\\
+Consequently, our efforts are directed towards identifying HSGs that may contribute to the development of Medulloblastoma. \\
+To this purpose, the set of Medulloblastoma HSGs will be integrated with FANTOM \cite{fantom5} causal relations. A functional and a network analysis will be carried out on the resulting set of genes and hypotheses about the role of HSGs in the context of Medulloblastoma will be formulated based on the results. \\
+Comparative analysis??
 
 \section{Biological question}\label{sec:biological_question}
-The question that leads the project concerns the contribution of Human Specific Genes (HSGs) with respect to non-HSGs in the context of medulloblastoma (MB). \\
-To answer to this question, we will exploit the outcome of these three experiments: identifying the presence of causal relations among MB HSGs and interpreting their significance, assessing the functional significance of the MB subset of HSGs and exploring the topology of the network built on the subset of HSGs. \\
-Together, these objectives will build up the knowledge necessary to unravel the role of HSGs in MB and at which level these genes can act as markers for MB subtyping. 
-
+The question driving this project revolves around the role of Human Specific Genes in comparison to non-HSGs within the context of medulloblastoma. \\
+In order to address this question, we will assess the following point: 
+\begin{enumerate}
+    \item Identifying the existence of causal relationships among HSGs specific to MB and elucidating their significance. 
+    \item Evaluating the functional significance of the subset of HSGs associated with MB.
+    \item Investigating the network structure constructed from the subset of HSGs. 
+\end{enumerate}
+Collectively, these objective will help us to acquire the knowledge necessary to uncover the significance of HSGs in medulloblastoma and determine the level to which these genes can serve as markers for subtyping MB.
 
 \section{Data}\label{sec:data}
 
 \subsection{Cohort selection}\label{sec:cohort_selection}
-Looking at different resources available in the web, we selected the bla bla bla [ref] cohort. \\
-It comprises NUMBER of samples, bla bla bla. \\
-Which kind of data data are?\\
-Talk about the different data available in the dataset. 
+
+\subsubsection{GSE155446}\label{sec:GSE155446}
+Cohort GSE155446 \cite{riemondy2022neoplastic} represents a comprehensive exploration of cellular heterogeneity within 28 childhood medulloblastoma cases, classified into different subgroups, including 1 WNT, 9 SHH, 7 GP3 and 11 GP4 medulloblastoma. \\
+This study investigates cellular diversity in childhood medulloblastoma using single-cell RNA sequencing, revealing distinct neoplastic cell subpopulations associated with mitotic, undifferentiated, and neuronal profiles. 
+
+\subsubsection{GSE118068}\label{sec:GSE118068}
+Cohort GSE118068 \cite{vladoiu2019childhood} bla bla bla.
 
 \subsection{List of Human Specific Genes}\label{sec:list_genes}
-A list of Human Specific Genes were retrieved from the work of Bitari et al. \cite{bitar2019genes}. \\
-In their work bla bla \\
-This list of genes retrieved will be used to intersect bla bla bla.
+A list of Human Specific Genes was retrieved from the work of Bitar et al. \cite{bitar2019genes} were selected in order to further select the HSGs related with MB. \\
+In particular, this list is composed of 856 genes that  bla bla bla.
 
 \subsection{FANTOM dataset}\label{sec:Fantom_dataset}
-The FANTOM \cite{fantom5} 
+The FANTOM \cite{fantom5} dataset will be used to expand the set of Medulloblastoma HSGs so that genes involved in causal relations will be also considered.
 
 \section{Pipeline}\label{sec:pipeline}
 The project workflow is described in \textbf{Figure ref}. Looking at it, it is possible to divide the work in four or five or more (don't know at the moment) main steps.
@@ -137,26 +154,40 @@ The project workflow is described in \textbf{Figure ref}. Looking at it, it is p
 \end{enumerate}
 
 \subsection{Data preprocessing}\label{sec:pre_processing}
-This initial step play a pivotal role in our research project. While GSE datasets are carefully curated, they may still contain varying degress of noise, errors, or inconsistencies. The preprocessing of this dataset is of utmost importance to guarantee the integrity and suitability of the data for our analysis. \\
-By tackling issues such as data standardization, normalization, the removal of batch effects, imputation of missing data, and the detection of outliers, our aim is to bloster the validity and comprehensibility of our results. These measures are essential in preparing the chosen GSE dataset for a thorough analysis and interpretation, ensuring the resiliance and dependability of our findings within the context of our study's specific objectives.
+In our project, we will leverage the power of Scanpy \cite{wolf2018scanpy} to conduct data preprocessing for scRNA datasets, a crucial initial step in our analysis pipeline. This preprocessing workflow is pivotal for handling the complexity of scRNA data and ensuring the accuracy of downstream analyses. We will begin by importing the raw count matrix into Scanpy's AnnData object, facilitating data organization and management. Quality control will follow, where we will apply stringent filters to eliminate low-quality cells and genes based on criteria such as minimum count per cell or gene expression levels. To reduce technical bias, we will normalize the data using library size scaling or log transformation. For dimensionality reduction, techniques like PCA or UMAP will be employed to uncover the underlying structure of the data. Clustering algorithms will help identify distinct cell populations, and marker genes will be detected to label cell types accurately. \\
+When integrating the two different GSE cohort (EXPLAIN!), we will also implement batch correction techniques (i.e. Combat).
 
 \subsection{Integrate the filtered Medulloblastoma Human Specific Genes with the FANTOM data}
-
+After having obtained our list of HSGs, we will integrate them with the FANTOM \cite{fantom5} dataset in order to retrieve causal relations.
 
 \subsection{Functional Analysis}\label{sec:functional_analysis}
-
+Differential expression analysis if we do comparative \\
+Pathway enrichment analysis
 
 \subsection{Network Analysis}\label{sec:network_analysis}
 With the data obtained, we aim to construct a network of interactions. \\
 Once the network is established, we will embark on measuring various metrics, including clustering coefficient, diameter, and centrality measures, to uncover its inherent characteristics. \\
 A key focus of our analysis will be the identification of hub genes, as well as the potential delineation of network communities. These analyses will shed light on the most influential components of the network and the existence of functional modules within it. \\
-To accomplish this, we will employ various existing Python libraries designed for network analysis, such as NetworkX \cite{hagberg2008exploring} or iGraph \cite{csardi2006igraph}. However, it is worth nothing that we approach this task without any a priori knowledge of the network's size. Given the potential computational challenges this may pose, we will evaluate the feasibility of each steps during the analysis. 
+To accomplish this, we will employ NetworkX \cite{hagberg2008exploring}, a Python library specifically built for network analysis. However, it is worth nothing that we approach this task without any a priori knowledge of the network's size. Given the potential computational challenges this may pose, we will evaluate the feasibility of each steps during the analysis. 
 
-
-\section{Expected results}\label{sec:expected_results}
+\section{Expected results and contingency plans}\label{sec:expected_results}
+By undertaking this analysis we expect to observe a functionally significant role played by Human Specific Genes with respect to non-HSGs. Should this functional significance be confirmed, further studies will be undertaken in order to evaluate the biological functions of the inferred genes. \
+Otherwise, the absence of such functional significance could be considered as a result. However, this would prompt us to possibly redirect our research focus towards another neurological disorder. 
 
 \section{Project management}\label{sec:management}
-Foremost the project will be developed in a teamwork driven manner. In the initial stages (e.g. data selection, data pre-processing, etc.), the entire team will work together. After integrating the medulloblastoma HSGs with the FANTOM dataset \cite{fantom5}, the team will be ideally divided into two subgroups. The first one, consisting of Gaia Faggin and Huyen Pham, will be responsible for conducting the functional analysis. Meanwhile, the second subgroup, composed of Sara Baldinelli, Letizia De Pietri, and Roan Spadazzi, will focus on network analysis. It is worth noting that both subgroups will maintain collaboration, allowing them to benefit from the diverse backgrounds and experiences of each member. Finally, the data interpretation and the conclusion will be discussed together.
+Foremost the project will be developed in a teamwork driven manner. In the initial stages (e.g. data selection, data pre-processing, etc.), the entire team will work together. After integrating the medulloblastoma HSGs with the FANTOM dataset \cite{fantom5}, the team will be ideally divided into two subgroups. The first one, consisting of Gaia Faggin and Huyen Pham, will be responsible for conducting the functional analysis. Meanwhile, the second subgroup, composed of Sara Baldinelli, Letizia De Pietri and Roan Spadazzi, will focus on network analysis. It is worth noting that both subgroups will maintain collaboration, allowing them to benefit from the diverse backgrounds and experiences of each member. Finally, the data interpretation and the conclusion will be discussed together.
+
+\section{Resources}\label{sec:resources}
+It is important to note that the resources listed herein are not to be considered final. As this is merely a project proposal, during the analysis phase, we may require additional libraries or tools.
+
+\subsubsection*{FANTOM}\label{fantom}
+...
+
+\subsubsection*{Scanpy}\label{scanpy}
+Since we are using scRNA datasets, we will employ the Scanpy library \cite{wolf2018scanpy}, a powerful Python tool tailored for the analysis of single-cell gene expression data. Scanpy is purposefully designed in collaboration with anndata \cite{virshup2021anndata}, encompassing a wide array of functionalities, including preprocessing, data visualization, clustering, trajectory inference, and differential expression analysis. 
+
+\subsubsection*{NetworkX}\label{networkX}
+To analyze the properties of the whole network I utilized NetworkX, a Python package specifically designed for exploring and analyzing networks \cite{hagberg2008exploring}. NetworkX offers a comprehensive set of tools for network representation, allowing nodes to be any hashable Python object and edges to contain diverse data. The package provides various data structures to handle different types of networks, along with a wide range of implemented algorithms for measuring network properties. 
 
 
 
