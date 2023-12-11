@@ -221,37 +221,36 @@
 % ---------------------------------------------------------------------
 
 \renewcommand{\@maketitle}{%
-	\twocolumn[{%
-		\thispagestyle{empty}%
-		\vskip-36pt%
-		{\raggedleft\small\sffamily\bfseries\@JournalInfo\\\@Archive\par}%
-		\vskip20pt%
-		{\raggedright\color{color1}\sffamily\bfseries\fontsize{20}{25}\selectfont \@PaperTitle\par}%
-		\vskip10pt%
-		{\raggedright\color{color1}\sffamily\fontsize{12}{16}\selectfont \@Authors\par}%
-		\vskip18pt%
-		\fcolorbox{color1}{white}{%
-			\parbox{\textwidth-2\fboxsep-2\fboxrule}{\centering%
-				\colorbox{color2!10}{%
-					\parbox{\textwidth-4\fboxsep-2\fboxrule}{%
-						\ifx\@Keywords\@empty%
-							\sffamily\textbf{\abstractname}\\\@Abstract%
-						\else%
-							\sffamily\textbf{\abstractname}\\\@Abstract\\[4pt]%
-							\textbf{\keywordname}\\\@Keywords%
-						\fi%
-					}%
-				}%
-				\vskip4pt%
-				\begingroup%
-					\raggedright\sffamily\small%
-					\footnotesize\@affiliation\par%
-				\endgroup%%
-			}%
-		}%
-		\vskip25pt%
-	}]%
+    \thispagestyle{empty}%
+    \vskip-36pt%
+    {\raggedleft\small\sffamily\bfseries\@JournalInfo\\\@Archive\par}%
+    \vskip20pt%
+    {\raggedright\color{color1}\sffamily\bfseries\fontsize{20}{25}\selectfont \@PaperTitle\par}%
+    \vskip10pt%
+    {\raggedright\color{color1}\sffamily\fontsize{12}{16}\selectfont \@Authors\par}%
+    \vskip18pt%
+    \fcolorbox{color1}{white}{%
+        \parbox{\textwidth-2\fboxsep-2\fboxrule}{\centering%
+            \colorbox{color2!10}{%
+                \parbox{\textwidth-4\fboxsep-2\fboxrule}{%
+                    \ifx\@Keywords\@empty%
+                        \sffamily\textbf{\abstractname}\\\@Abstract%
+                    \else%
+                        \sffamily\textbf{\abstractname}\\\@Abstract\\[4pt]%
+                        \textbf{\keywordname}\\\@Keywords%
+                    \fi%
+                }%
+            }%
+            \vskip4pt%
+            \begingroup%
+                \raggedright\sffamily\small%
+                \footnotesize\@affiliation\par%
+            \endgroup%%
+        }%
+    }%
+    \vskip25pt%
 }
+
 
 %----------------------------------------------------------------------------------------
 %	REFERENCES
