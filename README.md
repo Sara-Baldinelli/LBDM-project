@@ -12,7 +12,7 @@ This repository contains the analysis pipeline and results from a study investig
 ## Data and Methods
 Datasets:
 - GSE155446: Single-cell RNA sequencing data from MB cases.
-- GSE118068: Reference dataset from normal postnatal hindbrain samples.\
+- GSE118068: Reference dataset from normal postnatal mouse hindbrain samples.
   
 Tools and Libraries:
 - Quality Control & Analysis: Scanpy, NumPy, SciPy, ggplot2
